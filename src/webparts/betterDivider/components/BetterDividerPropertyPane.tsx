@@ -25,7 +25,7 @@ import {
   renameBetterDividerInstanceClassInCss,
   syncBetterDividerCssFromProperties
 } from '../../../shared/divider';
-import { CssEditorField } from './CssEditorField';
+import { betterDividerScssEditorConfiguration, SourceEditorField, SourceEditorTarget } from './SourceEditorField';
 
 export interface BetterDividerPropertyPaneProps {
   properties: BetterDividerProperties;
@@ -57,7 +57,7 @@ export const BetterDividerPropertyPane: React.FunctionComponent<BetterDividerPro
     applyValues({ ...parsed, customCss });
   };
 
-  const renameTarget = (_target: CssEditorTarget, nextSelector: string, nextValue: string): void => {
+  const renameTarget = (_target: SourceEditorTarget, nextSelector: string, nextValue: string): void => {
     const nextInstanceClassName = normalizeBetterDividerInstanceClassName(nextSelector, values.instanceClassName);
     const customCss = renameBetterDividerInstanceClassInCss(nextValue, values.instanceClassName, nextInstanceClassName);
     const parsed = parseBetterDividerPropertiesFromCss(customCss, {
@@ -128,8 +128,10 @@ export const BetterDividerPropertyPane: React.FunctionComponent<BetterDividerPro
                 onChange={(spacing) => applyControlPatch({ spacing })}
               />
             </div>
-            <CssEditorField
+            <SourceEditorField
+              configuration={betterDividerScssEditorConfiguration}
               label="Custom CSS/SCSS"
+              language="scss"
               targetComment={createBetterDividerCssTargetComment(values.instanceClassName)}
               targets={createBetterDividerCssTargets(values)}
               value={values.customCss}
@@ -142,14 +144,6 @@ export const BetterDividerPropertyPane: React.FunctionComponent<BetterDividerPro
     </IdPrefixProvider>
   );
 };
-
-interface CssEditorTarget {
-  label: string;
-  selector: string;
-  snippet: string;
-  editable?: boolean;
-  renameLabel?: string;
-}
 
 interface ColorFieldProps {
   label: string;
