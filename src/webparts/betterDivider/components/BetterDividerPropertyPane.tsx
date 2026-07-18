@@ -25,7 +25,11 @@ import {
   renameBetterDividerInstanceClassInCss,
   syncBetterDividerCssFromProperties
 } from '../../../shared/divider';
-import { betterDividerScssEditorConfiguration, SourceEditorField, SourceEditorTarget } from './SourceEditorField';
+import {
+  SourceEditorField,
+  SourceEditorFieldConfig,
+  SourceEditorTarget
+} from '../../../vendor/source-editor/SourceEditorField';
 
 export interface BetterDividerPropertyPaneProps {
   properties: BetterDividerProperties;
@@ -33,6 +37,12 @@ export interface BetterDividerPropertyPaneProps {
 }
 
 const fluentIdPrefix = 'better-divider-';
+const betterDividerScssEditorConfiguration: SourceEditorFieldConfig = {
+  inlineHeight: 190,
+  inlineModelPath: 'better-divider.custom.scss',
+  floatingModelPath: 'better-divider.custom.floating.scss',
+  toolbarLabel: 'SCSS target shortcuts'
+};
 
 export const BetterDividerPropertyPane: React.FunctionComponent<BetterDividerPropertyPaneProps> = (props) => {
   const [values, setValues] = React.useState<BetterDividerProperties>(() => normalizeBetterDividerProperties(props.properties));
