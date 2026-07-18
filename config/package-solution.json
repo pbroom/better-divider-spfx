@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "Better Divider",
+    "id": "c912dae7-5920-45a9-a7a4-33dd50e1a534",
+    "version": "0.1.5.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": false,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.21.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "Better Divider"
+      },
+      "longDescription": {
+        "default": "A SharePoint divider web part with configurable color, width, stroke, spacing, and rounded ends."
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "Better Divider Feature",
+        "description": "Activates the Better Divider web part.",
+        "id": "7cd679bc-a9fd-4fc7-b5c2-b13864059d15",
+        "version": "0.1.5.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/better-divider.sppkg"
+  }
+}

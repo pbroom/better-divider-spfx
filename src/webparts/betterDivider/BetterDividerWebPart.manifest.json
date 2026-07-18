@@ -1,0 +1,30 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "d5b3130e-6799-4998-8974-195b4fef0c65",
+  "alias": "BetterDividerWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "SharePointFullPage"],
+  "supportsThemeVariants": true,
+  "preconfiguredEntries": [
+    {
+      "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+      "group": { "default": "Text, media, and content" },
+      "title": { "default": "Better Divider" },
+      "description": { "default": "A configurable divider with color, width, stroke, spacing, and rounded ends." },
+      "officeFabricIconFontName": "Separator",
+      "properties": {
+        "color": "#8a8886",
+        "thickness": 1,
+        "width": 100,
+        "alignment": "center",
+        "lineStyle": "solid",
+        "rounded": false,
+        "spacing": 16,
+        "customCss": ""
+      }
+    }
+  ]
+}

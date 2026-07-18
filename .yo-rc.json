@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.14.0",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.21.1",
+    "libraryName": "better-divider-spfx",
+    "libraryId": "c912dae7-5920-45a9-a7a4-33dd50e1a534",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "Better Divider",
+    "solutionShortDescription": "A configurable SharePoint divider web part.",
+    "skipFeatureDeployment": false,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
