@@ -317,9 +317,9 @@ export const SourceEditorField: React.FunctionComponent<SourceEditorFieldProps> 
 
   const commitTargetEdit = (target: SourceEditorTarget, value: string): void => {
     const nextSelector = normalizeEditableTargetSelector(value, target.selector);
-    setEditingTarget(null);
 
     if (nextSelector === target.selector) {
+      setEditingTarget(null);
       return;
     }
 
@@ -332,11 +332,13 @@ export const SourceEditorField: React.FunctionComponent<SourceEditorFieldProps> 
       if (!shouldCommitSource(commitMode, diagnostics)) {
         return;
       }
+      setEditingTarget(null);
       setDraft(nextValue);
       onTargetRename(target, nextSelector, nextValue);
       return;
     }
 
+    setEditingTarget(null);
     updateValue(nextValue);
   };
 

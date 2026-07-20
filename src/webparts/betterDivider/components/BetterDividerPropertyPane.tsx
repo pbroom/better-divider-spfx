@@ -139,7 +139,7 @@ export const BetterDividerPropertyPane: React.FunctionComponent<BetterDividerPro
               />
             </div>
             <SourceEditorField
-              configuration={betterDividerScssEditorConfiguration}
+              config={betterDividerScssEditorConfiguration}
               label="Custom CSS/SCSS"
               language="scss"
               targetComment={createBetterDividerCssTargetComment(values.instanceClassName)}
