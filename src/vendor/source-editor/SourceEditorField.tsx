@@ -310,8 +310,11 @@ export const SourceEditorField: React.FunctionComponent<SourceEditorFieldProps> 
 
     const separator = currentValue.trim() ? '\n\n' : '';
     const nextValue = `${currentValue.replace(/\s+$/, '')}${separator}${snippet.snippet}\n`;
-    updateValue(nextValue);
-    editor?.setValue?.(nextValue);
+    if (editor?.setValue) {
+      editor.setValue(nextValue);
+    } else {
+      updateValue(nextValue);
+    }
     editor?.focus?.();
   };
 
