@@ -2,6 +2,7 @@
   "name": "better-divider-spfx",
   "version": "0.1.5",
   "private": true,
+  "license": "MIT",
   "description": "Better Divider SPFx web part with configurable color, width, stroke, spacing, and rounded ends.",
   "engines": {
     "node": ">=22.14.0 <23.0.0"
